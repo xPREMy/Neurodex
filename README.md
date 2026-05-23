@@ -12,7 +12,7 @@ Neurodex is an open-source EMG acquisition and prosthetic control framework usin
 
 ## Hardware Used
 
-- ESP32-C6 / ESP32-C3
+- ESP32-C6 / ESP32-C3 (preferably version 3.0.2)
 - BioAmp EXG hardware
 - Surface EMG electrodes
 - Prosthetic robotic hand
