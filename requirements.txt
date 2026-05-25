@@ -3,3 +3,6 @@ matplotlib
 numpy
 scipy
 pyserial
+pyrealsense2
+mediapipe==0.10.14
+opencv-python
