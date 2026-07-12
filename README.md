@@ -213,10 +213,17 @@ Per-gesture performance:
   Little  → Precision: 92%  Recall: 85%
 
 ```
-<p align="center">
-  <video src="https://github.com/user-attachments/assets/b15664a9-fd4d-4ad7-a9e8-f584189f4b11" width="49%" controls></video>
-  <video src="https://github.com/user-attachments/assets/a38a191f-77dc-4289-84b7-adb99c6093ab" width="49%" controls></video>
-</p>
+<video src="https://github.com/user-attachments/assets/2035b6d9-998f-491d-8945-537fddf4429a" controls="controls" muted="muted" style="max-width: 100%; height: auto;">
+</video>
+
+<video src="https://github.com/user-attachments/assets/895c8942-584d-41e9-ad17-d1021dbaba8d" controls="controls" muted="muted" style="max-width: 100%; height: auto;">
+</video>
+
+
+
+
+
+
 
 ---
 
