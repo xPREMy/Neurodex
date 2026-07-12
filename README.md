@@ -199,6 +199,7 @@ python emg_csv_predict.py recording.csv
 
 ## Results
 
+
 ```
 Best classifier : ANN3 (2 hidden layers: 15×8, tanh, adam)
 Test accuracy   : 94.0%
@@ -210,6 +211,12 @@ Per-gesture performance:
   Middle  → Precision: 89%  Recall: 89%
   Ring    → Precision: 89%  Recall: 89%
   Little  → Precision: 92%  Recall: 85%
+
+
+<p align="center">
+  <video src="https://github.com/user-attachments/assets/b15664a9-fd4d-4ad7-a9e8-f584189f4b11" width="49%" controls></video>
+  <video src="https://github.com/user-attachments/assets/a38a191f-77dc-4289-84b7-adb99c6093ab" width="49%" controls></video>
+</p>
 ```
 
 ---
