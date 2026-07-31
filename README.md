@@ -17,7 +17,7 @@ This project replicates and extends the methodology of:
 
 - Real-time EMG signal acquisition via BLE (2000 Hz, 4 channels)
 - Complete signal preprocessing pipeline (notch + bandpass filtering)
-- 13 time and frequency domain feature extraction per channel (52 total)
+- 4 time and 2frequency domain feature extraction per channel (24 total)
 - Benchmarking of 22 classifier configurations — SVM, ANN, KNN, Random Forest, Extra Trees, XGBoost
 - **94% offline classification accuracy** across 5 individual finger gestures
 - Real-time gesture prediction with live visualization
@@ -58,7 +58,7 @@ Bandpass Filter (20–450 Hz, Butterworth 4th order, zero-phase)
 RMS-based Adaptive Segmentation
 (threshold = mean + 1.5×std, floor = 0.002)
          ↓
-Feature Extraction (13 features × 4 channels = 52 total)
+Feature Extraction (6 features × 4 channels = 24 total)
          ↓
 Class Balancing + 70/30 Stratified Split
          ↓
@@ -69,26 +69,20 @@ ML Classification → Gesture Prediction
 
 ## Features Extracted
 
-### Time Domain (8 per channel)
+### Time Domain (4 per channel)
 | Feature | Description |
 |---------|-------------|
 | MAV | Mean Absolute Value — muscle activation level |
 | WAMP | Willison Amplitude — motor unit firing rate (threshold: 5mV) |
 | VAR | Variance — signal power |
 | WL | Waveform Length — signal complexity |
-| ZC | Zero Crossings — frequency information |
-| SSC | Slope Sign Changes — firing complexity |
-| RMS | Root Mean Square — signal energy |
-| DASDV | Difference Absolute Standard Deviation Value |
 
-### Frequency Domain (5 per channel)
+
+### Frequency Domain (2 per channel)
 | Feature | Description |
 |---------|-------------|
 | MDF | Median Frequency — dominant frequency, fatigue sensitive |
 | MNF | Mean Frequency — power-weighted average frequency |
-| PKF | Peak Frequency — maximum power frequency |
-| MNP | Mean Power — average spectral power |
-| TTP | Total Power — total spectral energy |
 
 ---
 
@@ -199,6 +193,7 @@ python emg_csv_predict.py recording.csv
 
 ## Results
 
+
 ```
 Best classifier : ANN3 (2 hidden layers: 15×8, tanh, adam)
 Test accuracy   : 94.0%
@@ -210,7 +205,19 @@ Per-gesture performance:
   Middle  → Precision: 89%  Recall: 89%
   Ring    → Precision: 89%  Recall: 89%
   Little  → Precision: 92%  Recall: 85%
+
 ```
+<video src="https://github.com/user-attachments/assets/2035b6d9-998f-491d-8945-537fddf4429a" controls="controls" muted="muted" style="max-width: 100%; height: auto;">
+</video>
+
+<video src="https://github.com/user-attachments/assets/895c8942-584d-41e9-ad17-d1021dbaba8d" controls="controls" muted="muted" style="max-width: 100%; height: auto;">
+</video>
+
+
+
+
+
+
 
 ---
 
